@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="om.iamcure.bo.UserBO" table="UserMedicalHistBO">
+    <id name="id" column="id">
+      <generator class="identity" />
+    </id>
+<property name="U_ID" column="U_ID" not-null="true"/>
+<property name="User_ID" column="User_ID" not-null="true"/>
+<property name="Age" column="Age" not-null="true"/>
+<property name="Weight" column="Weight" not-null="true"/>
+<property name="Hight" column="Hight" not-null="true"/>
+<property name="Blood_Group" column="Blood_Group" not-null="true"/>
+<property name="CreatedDate" column="CreatedDate" not-null="true"/>
+<property name="ModifiedDate" column="ModifiedDate" not-null="true"/>
+<property name="InsuranceCompany" column="InsuranceCompany" not-null="true"/>
+<property name="InsuranceID" column="InsuranceID" not-null="true"/>
+<property name="InsuranceExpaireDate" column="InsuranceExpaireDate" not-null="true"/>
+  </class>
+</hibernate-mapping>

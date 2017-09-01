@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="om.iamcure.bo.UserBO" table="UserPaymentInfoBO">
+	<id name="id" column="U_ID">
+		  <generator class="identity" />
+		</id>
+	<property name="User_ID" column="User_ID" not-null="true"/>
+	<property name="Card_Number" column="Card_Number" not-null="true"/>
+	<property name="Exp_Date" column="Exp_Date" not-null="true"/>
+	<property name="CVV" column="CVV" not-null="true"/>
+	<property name="Name_On_The_Card" column="Name_On_The_Card" not-null="true"/>
+	<property name="Created_Date" column="Created_Date" not-null="true"/>
+	<property name="LastModified_Date" column="LastModified_Date" not-null="true"/>
+	</class>
+</hibernate-mapping>

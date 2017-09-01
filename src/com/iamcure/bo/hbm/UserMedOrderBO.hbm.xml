@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="om.iamcure.bo.UserBO" table="UserMedOrderBO">
+	 <id name="id" column="U_ID">
+      <generator class="identity" />
+    </id>
+	<property name="U_ID" column="U_ID" not-null="true"/>
+	<property name="User_ID" column="User_ID" not-null="true"/>
+	<property name="TimeStamp" column="TimeStamp" not-null="true"/>
+	<property name="Store_ID" column="Store_ID" not-null="true"/>
+	<property name="Store_Name" column="Store_Name" not-null="true"/>
+	<property name="Ordered_Time" column="Ordered_Time" not-null="true"/>
+	<property name="Payment_Type" column="Payment_Type" not-null="true"/>
+	<property name="Description" column="Description" not-null="true"/>
+	</class>
+</hibernate-mapping>

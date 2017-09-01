@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="om.iamcure.bo.UserProfileBO" table="userprofile">
+    <id name="U_ID" column="U_ID">
+      <generator class="identity" />
+    </id>
+    <property name="CreatedBy" column="CreatedBy" not-null="true" />
+    <property name="User_ID" column="User_ID" not-null="true" />
+    <property name="First_Name" column="First_Name" not-null="true" />
+    <property name="Last_Name" column="Last_Name" not-null="true" />
+    <property name="image" column="image" not-null="true" />
+    <property name="Releation" column="Releation" not-null="true" />
+    <property name="Date_Of_Birth" column="Date_Of_Birth" not-null="true" />
+    <property name="AdharCard_Number" column="AdharCard_Number" not-null="true" />
+    <property name="country" column="country" not-null="true" />
+    <property name="State" column="State" not-null="true" />
+    <property name="Pincode" column="Pincode" not-null="true" />
+    <property name="City" column="City" not-null="true" />
+    <property name="Address_1" column="Address_1" not-null="true" />
+    <property name="Address_2" column="Address_2" not-null="true" />
+    <property name="Phone_Number" column="Phone_Number" not-null="true" />
+    <property name="E_Mail_ID" column="E_Mail_ID" not-null="true" />
+    <property name="Emergenc_Contact" column="Emergenc_Contact" not-null="true" />
+    <property name="Emergenc_Contact_2" column="Emergenc_Contact_2" not-null="true" />
+    <property name="CreateDate" column="CreateDate" not-null="true" />
+    <property name="LastModifiedBy" column="LastModifiedBy" not-null="true" />
+    <property name="CreatedBy" column="CreatedBy" not-null="true" />
+    <property name="LastModified_Date" column="LastModified_Date" not-null="true"/>
+    
+    
+  </class>
+</hibernate-mapping>

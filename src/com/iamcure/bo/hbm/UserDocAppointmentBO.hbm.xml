@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="om.iamcure.bo.UserBO" table="UserDocAppointmentBO">
+    <id name="id" column="id">
+      <generator class="identity" />
+    </id>
+	<property name="U_ID" column="U_ID" not-null="true"/>
+	<property name="User_Name" column="User_Name" not-null="true"/>
+	<property name="Appointment_Mode" column="Appointment_Mode" not-null="true"/>
+	<property name="AppointmentDate" column="AppointmentDate" not-null="true"/>
+	<property name="AppointmentCreatedDate" column="AppointmentCreatedDate" not-null="true"/>
+	<property name="AppointmentModifiedDate" column="AppointmentModifiedDate" not-null="true"/>
+	<property name="AppointmentDoctor" column="AppointmentDoctor" not-null="true"/>
+	<property name="AppointmentDoctor_ID" column="AppointmentDoctor_ID" not-null="true"/>
+	<property name="Description" column="Description" not-null="true"/>
+	<property name="Confirmation" column="Confirmation" not-null="true"/>
+	<property name="TimeStamp" column="TimeStamp" not-null="true"/>
+	<property name="Location" column="Location" not-null="true"/>
+  </class>
+</hibernate-mapping>
