@@ -35,6 +35,13 @@ public class UserServlet extends HttpServlet {
 	}
 
 	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet1(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -44,10 +51,11 @@ public class UserServlet extends HttpServlet {
 		String email=request.getParameter("email");
 		String fullName=request.getParameter("fullName");
 		String password=request.getParameter("password");
+		String type=request.getParameter("Type");
 		
 		if(action.equalsIgnoreCase("Register")){
 		
-		    boolean result=UserListener.createUser(phoneNumber, email, fullName, password);
+		    boolean result=UserListener.createUser(phoneNumber, email, fullName, password,type);
 		
 			if(result)
 				sendResponse(response,"user.jsp?Response="+URLEncoder.encode(fullName+"-created successfully!"));
