@@ -15,6 +15,16 @@ public class UserBO {
 	private String password;
 	
 	private Calendar createdDate;
+	
+	private String Type;
+
+	public String getType() {
+		return Type;
+	}
+
+	public void setType(String type) {
+		Type = type;
+	}
 
 	public int getId() {
 		return id;

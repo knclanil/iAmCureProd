@@ -7,8 +7,8 @@ import com.iamcure.dao.UserDAO;
 import com.iamcure.util.UserUtil;
 
 public class UserListener {
-	
-	public static boolean createUser(String phoneNumber,String email,String fullName,String password){
+
+	public static boolean createUser(String phoneNumber,String email,String fullName,String password, String Type){
 		UserBO user=new UserBO();
 		user.setPhoneNumber(phoneNumber);
 		user.setEmail(email);
@@ -16,6 +16,7 @@ public class UserListener {
 		user.setPassword(password);
 		Calendar createdDate=Calendar.getInstance();
 		user.setCreatedDate(createdDate);
+		user.setType(Type);
 		boolean result=UserDAO.createuser(user);
 		
 		if(result){
