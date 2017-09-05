@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  <class name="om.iamcure.bo.UserLoginHistoryBO" table="user">
+  <class name="om.iamcure.bo.UserLoginHistoryBO" table="UserLoginHistoryBO">
     <id name="U_id" column="u_id">
       <generator class="identity" />
     </id>
