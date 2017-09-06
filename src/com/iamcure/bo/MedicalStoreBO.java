@@ -4,12 +4,12 @@ import java.util.Calendar;
 
 public class MedicalStoreBO {
 
-	private int U_ID;
+	private String U_ID;
 	private String MedicalstoreName;
 	private String Country;
 	private String StateName;
 	private String City;
-	private int PinCode;
+	private String PinCode;
 	private String StreetName;
 	private String PhoneNumber;
 	private String MedicalStorePhoto;
@@ -20,11 +20,25 @@ public class MedicalStoreBO {
 	private String MedicalPrescription;
 	private Calendar CreatedDate;
 	private Calendar LastModifiedDate;
-	public int getU_ID() {
+	private String CreatedBy;
+	private String LastmodifiedBy;
+	public String getCreatedBy() {
+		return CreatedBy;
+	}
+	public void setCreatedBy(String createdBy) {
+		CreatedBy = createdBy;
+	}
+	public String getLastmodifiedBy() {
+		return LastmodifiedBy;
+	}
+	public void setLastmodifiedBy(String lastmodifiedBy) {
+		LastmodifiedBy = lastmodifiedBy;
+	}
+	public String getU_ID() {
 		return U_ID;
 	}
-	public void setU_ID(int u_ID) {
-		U_ID = u_ID;
+	public void setU_ID(String u_ID2) {
+		U_ID = u_ID2;
 	}
 	public String getMedicalstoreName() {
 		return MedicalstoreName;
@@ -50,10 +64,10 @@ public class MedicalStoreBO {
 	public void setCity(String city) {
 		City = city;
 	}
-	public int getPinCode() {
+	public String getPinCode() {
 		return PinCode;
 	}
-	public void setPinCode(int pinCode) {
+	public void setPinCode(String pinCode) {
 		PinCode = pinCode;
 	}
 	public String getStreetName() {

@@ -23,5 +23,7 @@
 	<property name="Report" column="Report" not-null="true" />
 	<property name="CreatedDate" column="CreatedDate" not-null="true" />
 	<property name="LastModifiedDate" column="LastModifiedDate" not-null="true" />
+	<property name="CreatedBy" column="CreatedBy" not-null="true" />
+	<property name="LastModifiedBy" column="LastModifiedBy" not-null="true" />
   </class>
 </hibernate-mapping>
