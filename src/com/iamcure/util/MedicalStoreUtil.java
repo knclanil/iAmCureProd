@@ -118,8 +118,5 @@ public class MedicalStoreUtil	 {
 			return userMap.get(Integer.valueOf(userId));
 		else return null;
 	}
-	
-	
-	
 
 }
