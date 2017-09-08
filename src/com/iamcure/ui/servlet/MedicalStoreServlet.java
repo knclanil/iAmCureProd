@@ -1,7 +1,6 @@
 package com.iamcure.ui.servlet;
 
 import java.io.IOException;
-import java.util.Calendar;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +15,7 @@ import com.iamcure.util.DateUtil;
  */
 public class MedicalStoreServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String Operation = null;
-       
-    /**
+	/**
      * @see HttpServlet#HttpServlet()
      */
     public MedicalStoreServlet() {
@@ -55,7 +52,7 @@ public class MedicalStoreServlet extends HttpServlet {
 		if(medicalstoreName!=null && medicalstoreName.contains("^''''^"))
 			medicalstoreName=medicalstoreName.replace("^''''^", "#");
 		
-		Calendar 	createdDateCal=DateUtil.getCalFromDbFormatString(createdDate);
+		DateUtil.getCalFromDbFormatString(createdDate);
 		
 		MedicalStoreListener.createOrUpdateMedicalStore(u_ID, medicalstoreName, 
 		country, stateName, city, pinCode, streetName, phoneNumber, medicalStorePhoto, descripition, 

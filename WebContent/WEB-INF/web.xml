@@ -29,4 +29,14 @@
     <servlet-name>UserProfileServlet</servlet-name>
     <url-pattern>/UserProfileServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DoctorServlet</display-name>
+    <servlet-name>DoctorServlet</servlet-name>
+    <servlet-class>com.iamcure.ui.servlet.DoctorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoctorServlet</servlet-name>
+    <url-pattern>/DoctorServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
