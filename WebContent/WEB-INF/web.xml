@@ -39,4 +39,14 @@
     <servlet-name>DoctorServlet</servlet-name>
     <url-pattern>/DoctorServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DiagnosticCenterServelet</display-name>
+    <servlet-name>DiagnosticCenterServelet</servlet-name>
+    <servlet-class>com.iamcure.ui.servlet.DiagnosticCenterServelet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DiagnosticCenterServelet</servlet-name>
+    <url-pattern>/DiagnosticCenterServelet</url-pattern>
+  </servlet-mapping>
 </web-app>

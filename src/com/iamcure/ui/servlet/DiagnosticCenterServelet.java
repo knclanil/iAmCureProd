@@ -8,18 +8,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.iamcure.bo.listener.MedicalStoreListener;
+import com.iamcure.bo.listener.DiagnosticCenterListener;
 import com.iamcure.util.DateUtil;
 
 /**
- * Servlet implementation class MedicalStoreServelet
+ * Servlet implementation class DiagnosticCenterServelet
  */
-public class MedicalStoreServlet extends HttpServlet {
+public class DiagnosticCenterServelet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	/**
+       
+    /**
      * @see HttpServlet#HttpServlet()
      */
-    public MedicalStoreServlet() {
+    public DiagnosticCenterServelet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,38 +29,39 @@ public class MedicalStoreServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	
 		String U_ID=request.getParameter("U_ID");
-		String MedicalstoreName=request.getParameter("MedicalstoreName");
+		String DiagnosticCenterName=request.getParameter("DiagnosticCenterName");
 		String Country=request.getParameter("Country");
 		String StateName=request.getParameter("StateName");
 		String City=request.getParameter("City");
-		String PinCode=request.getParameter("PinCode");
+		String PinCode =request.getParameter("PinCode int");
 		String StreetName=request.getParameter("StreetName");
 		String PhoneNumber=request.getParameter("PhoneNumber");
-		String MedicalStorePicture=request.getParameter("MedicalStorePicture");
+		String DiagnosticCenterPhoto=request.getParameter("DiagnosticCenterPhoto");
 		String Descripition=request.getParameter("Descripition");
-		String DrugLicenseNumber=request.getParameter("DrugLicenseNumber");
-		String CreatedDate=request.getParameter("CreatedDate");
-		String LastModifiedDate=request.getParameter("LastModifiedDate");
+		String CreatedDate =request.getParameter("CreatedDate datetime");
+		String LastModifiedDate =request.getParameter("LastModifiedDate datetime");
 		String CreatedBy=request.getParameter("CreatedBy");
 		String LastModifiedBy=request.getParameter("LastModifiedBy");
 		String ContactPerson=request.getParameter("ContactPerson");
+		String SamplesPickup=request.getParameter("SamplesPickup");
+		String DiagnosticsCenterLicenseNumber=request.getParameter("DiagnosticsCenterLicenseNumber");
+		String DiagnosticsCenterLicenseDocument=request.getParameter("DiagnosticsCenterLicenseDocument");
 		String IsVerified=request.getParameter("IsVerified");
-		String DrugDelivery=request.getParameter("DrugDelivery");
-		String DrugLicenseDocument=request.getParameter("DrugLicenseDocument");
-		String Operation=request.getParameter("operation");
+		String operation=request.getParameter("operation");
 		if(StreetName!=null && StreetName.contains("^''''^"))
 			StreetName=StreetName.replace("^''''^", "#");
-		if(MedicalstoreName!=null && MedicalstoreName.contains("^''''^"))
-			MedicalstoreName=MedicalstoreName.replace("^''''^", "#");
+		if(DiagnosticCenterPhoto!=null && DiagnosticCenterPhoto.contains("^''''^"))
+			DiagnosticCenterPhoto=DiagnosticCenterPhoto.replace("^''''^", "#");
+
 		
-		Calendar createdDateCal=DateUtil.getCalFromDbFormatString(CreatedDate);
-		Calendar LastModifiedDateCal=DateUtil.getCalFromDbFormatString(LastModifiedDate);
+		Calendar 	dateOfBirthCal=DateUtil.getCalFromDbFormatString(CreatedDate);
 		
-		MedicalStoreListener.createOrUpdateMedicalStore(MedicalstoreName, Country, StateName, City, PinCode, StreetName, 
-				PhoneNumber, MedicalStorePicture, Descripition, DrugLicenseNumber, createdDateCal, LastModifiedDateCal, 
-				CreatedBy, LastModifiedBy, ContactPerson, IsVerified, DrugDelivery, DrugLicenseDocument,"");
+		DiagnosticCenterListener.createOrUpdateDiagnosticCenter( U_ID, DiagnosticCenterName, Country, StateName, City, 
+		PinCode , StreetName, PhoneNumber, DiagnosticCenterPhoto, Descripition, CreatedDate , LastModifiedDate , CreatedBy,
+		LastModifiedBy, ContactPerson, SamplesPickup, DiagnosticsCenterLicenseNumber, DiagnosticsCenterLicenseDocument, 
+		IsVerified,operation);
 		
 		
 	}
@@ -68,7 +70,7 @@ public class MedicalStoreServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		// TODO Auto-generated method stub
 	}
 
 }

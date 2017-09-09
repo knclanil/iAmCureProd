@@ -6,15 +6,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.iamcure.bo.DoctorBO;
-import com.iamcure.dao.DoctorDAO;
+import com.iamcure.bo.DiagnosticCenterBO;
+import com.iamcure.dao.DiagnosticCenterDAO;
 
-public class DoctorUtil {
+public class DiagnosticCenterUtil {
 
 	/**
 	 * static map used to cache the user information
 	 */
-	public static Map<Integer, DoctorBO>  userMap=new HashMap<Integer, DoctorBO>();
+	public static Map<Integer, DiagnosticCenterBO>  userMap=new HashMap<Integer, DiagnosticCenterBO>();
 	
 	public static UserUtil UserLoginHistoryUtil=null;
 	
@@ -22,7 +22,7 @@ public class DoctorUtil {
 	 * Constructor to create the to initialise the map
 	 * @return 
 	 */
-	public DoctorUtil()
+	public DiagnosticCenterUtil()
 	{
 		constructMap();
 	}
@@ -32,13 +32,13 @@ public class DoctorUtil {
 	 */
 	public void constructMap() {
 		//get all the list of usersList 
-		List<DoctorBO> usersList=DoctorDAO.getAllUsers();
+		List<DiagnosticCenterBO> usersList=DiagnosticCenterDAO.getAllUsers();
 		if(usersList!=null && usersList.size()>0)
 			//for every user in the list
-			for(DoctorBO user:usersList)
+			for(DiagnosticCenterBO user:usersList)
 			{
 				//put the user record in the map
-				userMap.put(Integer.valueOf(user.getId()), user);
+				userMap.put(Integer.valueOf(user.getU_ID()), user);
 			}
 		
 	}
@@ -65,8 +65,8 @@ public class DoctorUtil {
 	{
 		if(userMap.containsKey(userId))
 		{
-			DoctorBO user=userMap.get(userId);
-			return user.getFullName();
+			DiagnosticCenterBO user=userMap.get(userId);
+			return user.getDiagnosticCenterName();
 		}
 		else 
 			return "";
@@ -76,9 +76,9 @@ public class DoctorUtil {
 	 * This method is to update the cache whenever a change is occured
 	 * @param emp
 	 */
-	public void updateUserMap(DoctorBO user)
+	public void updateUserMap(DiagnosticCenterBO user)
 	{
-		userMap.put(user.getId(),user);
+		userMap.put(user.getU_ID(),user);
 	}
 	
 	/**
@@ -95,9 +95,9 @@ public class DoctorUtil {
 	 * This method is to get list of all users
 	 * @return
 	 */
-	public List<DoctorBO> getAllUsers()
+	public List<DiagnosticCenterBO> getAllUsers()
 	{
-		List<DoctorBO> userList=new ArrayList<DoctorBO>();
+		List<DiagnosticCenterBO> userList=new ArrayList<DiagnosticCenterBO>();
 		Set<Integer> ids=userMap.keySet();
 		for(Integer id:ids)
 		{
@@ -113,7 +113,7 @@ public class DoctorUtil {
 	 * @return user when exists
 	 * returns null when the user details not exists
 	 */
-	public DoctorBO getUser(int userId)
+	public DiagnosticCenterBO getUser(int userId)
 	{
 		if(userMap!=null && userMap.containsKey(Integer.valueOf(userId)))
 			return userMap.get(Integer.valueOf(userId));
@@ -124,6 +124,6 @@ public class DoctorUtil {
 		// TODO Auto-generated method stub
 		
 	}
-	
 
+	
 }

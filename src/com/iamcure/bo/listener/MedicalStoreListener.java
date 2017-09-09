@@ -9,38 +9,36 @@ import com.iamcure.util.MedicalStoreUtil;
 
 public class MedicalStoreListener {
 	
-	public static boolean createOrUpdateMedicalStore(String u_ID,
-			String medicalstoreName, String country, String stateName,
-			String city, String pinCode, String streetName, String phoneNumber,
-			String medicalStorePhoto, String descripition, String storeTimings,
-			String storeRating, String storeReview, String medicalPrescription,
-			String createdDate, String lastModifiedDate, String createdBy, String lastModifiedBy , String operation) {
-
+	public static boolean createOrUpdateMedicalStore(String MedicalstoreName, String Country, String StateName,
+			String City, String PinCode, String StreetName, String PhoneNumber, String MedicalStorePicture, String Descripition, 
+			String DrugLicenseNumber, Calendar CreatedDate, Calendar LastModifiedDate, String CreatedBy, String LastModifiedBy,
+			String ContactPerson, String IsVerified, String DrugDelivery, String DrugLicenseDocument , String operation) 
+	{
 
 		MedicalStoreBO MedicalStore = new MedicalStoreBO();
-		MedicalStore.setU_ID(u_ID);
-		MedicalStore.setMedicalstoreName(medicalstoreName);
-		MedicalStore.setCountry(country);
-		MedicalStore.setStateName(stateName);
-		MedicalStore.setCity(city);
-		MedicalStore.setPinCode(pinCode);
-		MedicalStore.setStreetName(streetName);
-		MedicalStore.setPhoneNumber(phoneNumber);
-		MedicalStore.setMedicalStorePhoto(medicalStorePhoto);
-		MedicalStore.setDescripition(descripition);
-		MedicalStore.setStoreTimings(storeTimings);
-		MedicalStore.setStoreRating(storeRating);
-		MedicalStore.setStoreReview(storeReview);
-		MedicalStore.setMedicalPrescription(medicalPrescription);
-		MedicalStore.setCreatedBy(createdDate);
-		Calendar 	lastModDate = DateUtil.getCalFromDbFormatString(lastModifiedDate);
-		MedicalStore.setLastModifiedDate(lastModDate);
-		MedicalStore.setCreatedBy(createdBy);
-		MedicalStore.setLastmodifiedBy(lastModifiedBy);
-
+		MedicalStore.setMedicalstoreName(MedicalstoreName);
+		MedicalStore.setCountry(Country);
+		MedicalStore.setStateName(StateName);
+		MedicalStore.setCity(City);
+		MedicalStore.setPinCode(PinCode);
+		MedicalStore.setStreetName(StreetName);
+		MedicalStore.setPhoneNumber(PhoneNumber);
+		MedicalStore.setMedicalStorePicture(MedicalStorePicture);
+		MedicalStore.setDescripition(Descripition);
+		MedicalStore.setDrugLicenseNumber(DrugLicenseNumber);
+		MedicalStore.setCreatedDate(CreatedDate);
+		MedicalStore.setLastModifiedDate(LastModifiedDate);
+		MedicalStore.setCreatedBy(CreatedBy);
+		MedicalStore.setLastModifiedBy(LastModifiedBy);
+		MedicalStore.setContactPerson(ContactPerson);
+		MedicalStore.setIsVerified(IsVerified);
+		MedicalStore.setDrugDelivery(DrugDelivery);
+		MedicalStore.setDrugLicenseDocument(DrugLicenseDocument);
+		
+		
 		if (operation.equals("create")) {
 			
-			MedicalStore.setCreatedBy(createdBy);
+			MedicalStore.setCreatedBy(CreatedBy);
 			MedicalStore.setCreatedDate(Calendar.getInstance());
 
 			if (MedicalStoreDAO.createuser(MedicalStore)) {
@@ -49,7 +47,7 @@ public class MedicalStoreListener {
 			}
 
 		} else if (operation.equals("update")) {
-			MedicalStore.setLastmodifiedBy(lastModifiedBy);
+			MedicalStore.setLastModifiedBy(LastModifiedBy);
 			MedicalStore.setLastModifiedDate(Calendar.getInstance());
 			if (MedicalStoreDAO.updateuser(MedicalStore)) {
 				MedicalStoreUtil.getInstance().constructMap();
