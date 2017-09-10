@@ -56,10 +56,12 @@ public class DiagnosticCenterServelet extends HttpServlet {
 			DiagnosticCenterPhoto=DiagnosticCenterPhoto.replace("^''''^", "#");
 
 		
-		Calendar 	dateOfBirthCal=DateUtil.getCalFromDbFormatString(CreatedDate);
+		Calendar 	createddatecal=DateUtil.getCalFromDbFormatString(CreatedDate);
+		Calendar 	LastModifiedDatecal=DateUtil.getCalFromDbFormatString(CreatedDate);		
+		int U_IDint=Integer.valueOf(U_ID);
 		
-		DiagnosticCenterListener.createOrUpdateDiagnosticCenter( U_ID, DiagnosticCenterName, Country, StateName, City, 
-		PinCode , StreetName, PhoneNumber, DiagnosticCenterPhoto, Descripition, CreatedDate , LastModifiedDate , CreatedBy,
+		DiagnosticCenterListener.createOrUpdateDiagnosticCenter( U_IDint, DiagnosticCenterName, Country, StateName, City, 
+		PinCode , StreetName, PhoneNumber, DiagnosticCenterPhoto, Descripition, createddatecal , LastModifiedDatecal , CreatedBy,
 		LastModifiedBy, ContactPerson, SamplesPickup, DiagnosticsCenterLicenseNumber, DiagnosticsCenterLicenseDocument, 
 		IsVerified,operation);
 		

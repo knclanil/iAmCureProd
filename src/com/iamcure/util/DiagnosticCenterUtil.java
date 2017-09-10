@@ -32,7 +32,7 @@ public class DiagnosticCenterUtil {
 	 */
 	public void constructMap() {
 		//get all the list of usersList 
-		List<DiagnosticCenterBO> usersList=DiagnosticCenterDAO.getAllUsers();
+		List<DiagnosticCenterBO> usersList=DiagnosticCenterDAO.getAllDiagnosticCenters();
 		if(usersList!=null && usersList.size()>0)
 			//for every user in the list
 			for(DiagnosticCenterBO user:usersList)

@@ -36,13 +36,13 @@ public class DiagnosticCenterListener {
 		DiagnosticCenter.setDiagnosticsCenterLicenseNumber(DiagnosticsCenterLicenseNumber);
 		DiagnosticCenter.setDiagnosticsCenterLicenseDocument(DiagnosticsCenterLicenseDocument);
 		DiagnosticCenter.setIsVerified(IsVerified);
-		DiagnosticCenter.setoperation(operation);
+		
 		if (operation.equals("create")) {
 			
 			DiagnosticCenter.setCreatedBy(CreatedBy);
 			DiagnosticCenter.setCreatedDate(Calendar.getInstance());
 
-			if (DiagnosticCenterDAO.createuser(DiagnosticCenter)) {
+			if (DiagnosticCenterDAO.createDiagnosticCenter(DiagnosticCenter)) {
 				DiagnosticCenterUtil.getInstance().constructMap();
 				return true;
 			}
@@ -50,7 +50,7 @@ public class DiagnosticCenterListener {
 		} else if (operation.equals("update")) {
 			DiagnosticCenter.setLastModifiedBy(LastModifiedBy);
 			DiagnosticCenter.setLastModifiedDate(Calendar.getInstance());
-			if (DiagnosticCenterDAO.updateuser(DiagnosticCenter)) {
+			if (DiagnosticCenterDAO.updateDiagnosticCenter(DiagnosticCenter)) {
 				DiagnosticCenterUtil.getInstance().constructMap();
 				return true;
 			}

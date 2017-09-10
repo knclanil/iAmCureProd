@@ -127,18 +127,18 @@
                     <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
                   </div>
                   <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-                  </div>
+                    <input type="text" name="fullName" id="fullName" tabindex="1" class="form-control" placeholder="Full Name" value="">
+                  </div>	
                   <div class="form-group">
                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                    <input type="password" name="confirmPassword" id="confirmPassword" tabindex="2" class="form-control" placeholder="Confirm Password">
                   </div>
                   <div class="form-group">
                     <div class="row">
                       <div class="col-sm-6 col-sm-offset-3">
-                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now" onclick="submitToParent()">
                       </div>
                     </div>
                   </div>

@@ -7,7 +7,6 @@ import org.apache.commons.logging.LogFactory;
 
 import com.iamcure.bo.DiagnosticCenterBO;
 import com.iamcure.util.HibernateUtil;
-import com.sun.istack.internal.logging.Logger;
 
 public class DiagnosticCenterDAO {
 	
