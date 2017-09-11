@@ -29,7 +29,7 @@ public class MedicalStoreServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String U_ID=request.getParameter("U_ID");
+		request.getParameter("U_ID");
 		String MedicalstoreName=request.getParameter("MedicalstoreName");
 		String Country=request.getParameter("Country");
 		String StateName=request.getParameter("StateName");
@@ -48,7 +48,7 @@ public class MedicalStoreServlet extends HttpServlet {
 		String IsVerified=request.getParameter("IsVerified");
 		String DrugDelivery=request.getParameter("DrugDelivery");
 		String DrugLicenseDocument=request.getParameter("DrugLicenseDocument");
-		String Operation=request.getParameter("operation");
+		
 		if(StreetName!=null && StreetName.contains("^''''^"))
 			StreetName=StreetName.replace("^''''^", "#");
 		if(MedicalstoreName!=null && MedicalstoreName.contains("^''''^"))

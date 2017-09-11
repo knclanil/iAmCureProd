@@ -1,7 +1,6 @@
 package com.iamcure.ui.servlet;
 
 import java.io.IOException;
-import java.util.Calendar;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.iamcure.bo.listener.DoctorListener;
-import com.iamcure.util.DateUtil;
 import com.iamcure.util.DoctorUtil;
 
 /**

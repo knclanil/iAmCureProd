@@ -57,7 +57,7 @@ public class DiagnosticCenterServelet extends HttpServlet {
 
 		
 		Calendar 	createddatecal=DateUtil.getCalFromDbFormatString(CreatedDate);
-		Calendar 	LastModifiedDatecal=DateUtil.getCalFromDbFormatString(CreatedDate);		
+		Calendar 	LastModifiedDatecal=DateUtil.getCalFromDbFormatString(LastModifiedDate);		
 		int U_IDint=Integer.valueOf(U_ID);
 		
 		DiagnosticCenterListener.createOrUpdateDiagnosticCenter( U_IDint, DiagnosticCenterName, Country, StateName, City, 
