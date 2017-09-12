@@ -15,8 +15,22 @@ public class UserMedicalHistBO {
 	  private String Medication;
 	  private String Allergies;
 	  private String Healthproblem;
+	  private String OrganDonor;
+	  private String BloodDonor;
 	  
 	  
+	public String getOrganDonor() {
+		return OrganDonor;
+	}
+	public void setOrganDonor(String organDonor) {
+		OrganDonor = organDonor;
+	}
+	public String getBloodDonor() {
+		return BloodDonor;
+	}
+	public void setBloodDonor(String bloodDonor) {
+		BloodDonor = bloodDonor;
+	}
 	public String getMedication() {
 		return Medication;
 	}

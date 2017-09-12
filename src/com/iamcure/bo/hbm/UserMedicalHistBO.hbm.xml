@@ -20,6 +20,9 @@
 <property name="medication" column="medication" not-null="true"/>
 <property name="allergies" column="allergies" not-null="true"/>
 <property name="healthproblem" column="healthproblem" not-null="true"/>
+<property name="OraganDonor" column="OraganDonor" not-null="true"/>
+<property name="BloodDonor" column="BloodDonor" not-null="true"/>
+
 
   </class>
   </hibernate-mapping>
