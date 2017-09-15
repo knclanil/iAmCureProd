@@ -1,4 +1,4 @@
-function submitToParent(){
+function submitToPatient(){
 	
 		var User_ID=document.getElementById("User_ID").value();
 		var First_Name=document.getElementById("First_Name").value();
