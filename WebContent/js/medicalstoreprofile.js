@@ -1,50 +1,50 @@
 function submitToParent(){
 
-		var MedicalstoreName=document.getElementById("MedicalstoreName").value;();
-		var Country=document.getElementById("Country").value;();
-		var StateName=document.getElementById("StateName").value;();
-		var City=document.getElementById("City").value;();
-		var PinCode=document.getElementById("PinCode").value;();
-		var StreetName=document.getElementById("StreetName").value;();
-		var PhoneNumber=document.getElementById("PhoneNumber").value;();
-		var MedicalStorePicture=document.getElementById("MedicalStorePicture").value;();
-		var Descripition=document.getElementById("Descripition").value;();
-		var DrugLicenseNumber=document.getElementById("DrugLicenseNumber").value;();
-		var ContactPerson=document.getElementById("ContactPerson").value;();
-		var IsVerified tiny=document.getElementById("IsVerified tiny").value;();
-		var DrugDelivery tiny=document.getElementById("DrugDelivery tiny").value;();
-		var DrugLicenseDocument=document.getElementById("DrugLicenseDocument").value;();
+	var MedicalstoreName=document.getElementById("MedicalstoreName").value;
+	var Country=document.getElementById("Country").value;
+	var StateName=document.getElementById("StateName").value;
+	var City=document.getElementById("City").value;
+	var PinCode=document.getElementById("PinCode").value;
+	var StreetName=document.getElementById("StreetName").value;
+	var PhoneNumber=document.getElementById("PhoneNumber").value;
+	var MedicalStorePicture=document.getElementById("MedicalStorePicture").value;
+	var Descripition=document.getElementById("Descripition").value;
+	var DrugLicenseNumber=document.getElementById("DrugLicenseNumber").value;
+	var ContactPerson=document.getElementById("ContactPerson").value;
+	var IsVerified =document.getElementById("IsVerified ").value;
+	var DrugDelivery =document.getElementById("DrugDelivery ").value;
+	var DrugLicenseDocument=document.getElementById("DrugLicenseDocument").value;
 		
 	if(validateform())
 	{
 		addmedicalstoreprofile(MedicalstoreName, Country, StateName, City, PinCode, StreetName, PhoneNumber, 
-		MedicalStorePicture, Descripition, DrugLicenseNumber, ContactPerson, IsVerified tiny, DrugDelivery tiny, DrugLicenseDocument);
+		MedicalStorePicture, Descripition, DrugLicenseNumber, ContactPerson, IsVerified , DrugDelivery , DrugLicenseDocument);
 			
 	}else 
 		return false;
 	
 }
 		function addmedicalstoreprofile(MedicalstoreName, Country, StateName, City, PinCode, StreetName, PhoneNumber, 
-		MedicalStorePicture, Descripition, DrugLicenseNumber, ContactPerson, IsVerified tiny, DrugDelivery tiny, DrugLicenseDocument);
+		MedicalStorePicture, Descripition, DrugLicenseNumber, ContactPerson, IsVerified , DrugDelivery , DrugLicenseDocument);
 		{
-			document.location.href = "MedicalStoreServlet?action=Submint&MedicalstoreName="+MedicalstoreName+" &Country="+Country+" &StateName="+StateName+" &City="+City+" &PinCode="+PinCode+" &StreetName="+StreetName+" &PhoneNumber="+PhoneNumber+" &MedicalStorePicture="+MedicalStorePicture+" &Descripition="+Descripition+" &DrugLicenseNumber="+DrugLicenseNumber+" &ContactPerson="+ContactPerson+" &IsVerified tiny="+IsVerified tiny+" &DrugDelivery tiny="+DrugDelivery tiny+" &DrugLicenseDocument="+DrugLicenseDocument+";
+			document.location.href = "MedicalStoreServlet?action=Submint&MedicalstoreName="+MedicalstoreName+" &Country="+Country+" &StateName="+StateName+" &City="+City+" &PinCode="+PinCode+" &StreetName="+StreetName+" &PhoneNumber="+PhoneNumber+" &MedicalStorePicture="+MedicalStorePicture+" &Descripition="+Descripition+" &DrugLicenseNumber="+DrugLicenseNumber+" &ContactPerson="+ContactPerson+" &IsVerified="+IsVerified +" &DrugDelivery ="+DrugDelivery +" &DrugLicenseDocument="+DrugLicenseDocument;
 		}
 function validateform()
 {
-	var MedicalstoreName=document.getElementById("MedicalstoreName").value;();
-		var Country=document.getElementById("Country").value;();
-		var StateName=document.getElementById("StateName").value;();
-		var City=document.getElementById("City").value;();
-		var PinCode=document.getElementById("PinCode").value;();
-		var StreetName=document.getElementById("StreetName").value;();
-		var PhoneNumber=document.getElementById("PhoneNumber").value;();
-		var MedicalStorePicture=document.getElementById("MedicalStorePicture").value;();
-		var Descripition=document.getElementById("Descripition").value;();
-		var DrugLicenseNumber=document.getElementById("DrugLicenseNumber").value;();
-		var ContactPerson=document.getElementById("ContactPerson").value;();
-		var IsVerified tiny=document.getElementById("IsVerified tiny").value;();
-		var DrugDelivery tiny=document.getElementById("DrugDelivery tiny").value;();
-		var DrugLicenseDocument=document.getElementById("DrugLicenseDocument").value;();
+	var MedicalstoreName=document.getElementById("MedicalstoreName");
+	var Country=document.getElementById("Country");
+	var StateName=document.getElementById("StateName");
+	var City=document.getElementById("City");
+	var PinCode=document.getElementById("PinCode");
+	var StreetName=document.getElementById("StreetName");
+	var PhoneNumber=document.getElementById("PhoneNumber");
+	var MedicalStorePicture=document.getElementById("MedicalStorePicture");
+	var Descripition=document.getElementById("Descripition");
+	var DrugLicenseNumber=document.getElementById("DrugLicenseNumber");
+	var ContactPerson=document.getElementById("ContactPerson");
+	var IsVerified =document.getElementById("IsVerified ");
+	var DrugDelivery =document.getElementById("DrugDelivery ");
+	var DrugLicenseDocument=document.getElementById("DrugLicenseDocument");
 		
 		if(MedicalstoreName.value=='' )
 	{

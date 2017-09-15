@@ -16,14 +16,15 @@ public class UserBO {
 	
 	private Calendar createdDate;
 	
-	private String Type;
+	private String type;
+
 
 	public String getType() {
-		return Type;
+		return type;
 	}
 
 	public void setType(String type) {
-		Type = type;
+		this.type = type;
 	}
 
 	public int getId() {

@@ -9,8 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <script type="text/javascript" src="js/user.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <script type="text/javascript">
     $(function() {
     $('#login-form-link').click(function(e) {
@@ -44,7 +46,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">FindDoc</a>
+      <a class="navbar-brand" href="#">iAm-Cure</a>
     </div>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav navbar-right">
@@ -104,7 +106,8 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-sm-6 col-sm-offset-3">
-                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                        <input type="submit" name="login-submit" id="login-submit" 
+                        tabindex="4" class="form-control btn btn-login" value="Log In" onclick="submitToLogin()">
                       </div>
                     </div>
                   </div>
@@ -130,10 +133,10 @@
                     <input type="text" name="fullName" id="fullName" tabindex="1" class="form-control" placeholder="Full Name" value="">
                   </div>	
                   <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                    <input type="text" name="upassword" id="upassword" tabindex="1" class="form-control" placeholder="Password" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="confirmPassword" id="confirmPassword" tabindex="2" class="form-control" placeholder="Confirm Password">
+                    <input type="text" name="confirmPassword" id="confirmPassword" tabindex="1" class="form-control" placeholder="Confirm Password">
                   </div>
                   <div class="form-group">
                     <div class="row">

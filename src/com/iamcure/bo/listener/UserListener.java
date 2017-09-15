@@ -16,7 +16,7 @@ public class UserListener {
 		user.setPassword(password);
 		Calendar createdDate=Calendar.getInstance();
 		user.setCreatedDate(createdDate);
-		user.setType(Type);
+		user.setType("Customer");
 		boolean result=UserDAO.createuser(user);
 		
 		if(result){

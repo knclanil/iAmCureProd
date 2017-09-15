@@ -7,7 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.iamcure.bo.UserBO;
 import com.iamcure.bo.listener.UserListener;
+import com.iamcure.util.UserUtil;
 
 /**
  * Servlet implementation class UserServlet
@@ -27,22 +29,6 @@ public class UserServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet1(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	@SuppressWarnings("deprecation")
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		String action=request.getParameter("action");
 		String phoneNumber = request.getParameter("phoneNumber");
 		String email=request.getParameter("email");
@@ -61,15 +47,38 @@ public class UserServlet extends HttpServlet {
 		
 		
 		}else if(action.equalsIgnoreCase("Authentication")){
-		request.getParameter("userName");
+		String username=request.getParameter("username");
+		System.out.println("userName::"+username+"--->Password::"+password);
 		
-		
+		if(username!=null&&username.length()>0){
+			
+			UserBO user=UserUtil.getInstance().getUserByUserName(username);
+			
+			if(user==null)
+				sendResponse(response,"user.jsp?Response="+URLEncoder.encode("UserName is Not found!!"));
+			
+			if(user.getPassword().equals(password)){
+				sendResponse(response,"user.jsp?Response="+URLEncoder.encode("Success Fully login"));
+			}else{
+				sendResponse(response,"user.jsp?Response="+URLEncoder.encode("Password is Incorect!!"));
+			}
+			
+		}
 			
 		}else if(action.equalsIgnoreCase("Reset")){
 		request.getParameter("confirmPassword");
 			
 		}
 	
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
 		
 		
 	}

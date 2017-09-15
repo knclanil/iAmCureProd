@@ -2,33 +2,15 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  <class name="om.iamcure.bo.DoctorBO" table="doctorprofile">
+  <class name="com.iamcure.bo.UserBO" table="user">
     <id name="id" column="id">
       <generator class="identity" />
     </id>
-	<property name="fullName" column="fullName " not-null="true" />
-	<property name="isDoctor " column="isDoctor " not-null="true" />
-	<property name="qualification" column="qualification " not-null="true" />
-	<property name="College" column="College " not-null="true" />
-	<property name="CompletionYear" column="CompletionYear " not-null="true" />
-	<property name="Specilizations" column="Specilizations " not-null="true" />
-	<property name="specialized" column="specialized " not-null="true" />
-	<property name="CouncilRegistrationNumber" column="CouncilRegistrationNumber " not-null="true" />
-	<property name="CouncilName" column="CouncilName " not-null="true" />
-	<property name="CouncilYear" column="CouncilYear " not-null="true" />
-	<property name="CertificatePath" column="CertificatePath " not-null="true" />
-	<property name="IDProofPath" column="IDProofPath " not-null="true" />
-	<property name="isMedicalRegistrationverify " column="isMedicalRegistrationverify " not-null="true" />
-	<property name="Description" column="Description " not-null="true" />
-	<property name="Experince" column="Experince " not-null="true" />
-	<property name="City" column="City " not-null="true" />
-	<property name="DoctorImagePath" column="DoctorImagePath " not-null="true" />
-	<property name="EmailID" column="EmailID " not-null="true" />
-	<property name="PersonalContact" column="PersonalContact " not-null="true" />
-	<property name="BusinessContact" column="BusinessContact " not-null="true" />
-	<property name="Createdate" column="Createdate " not-null="true" />
-	<property name="CreatedBy" column="CreatedBy " not-null="true" />
-	<property name="LastmodifiedDate" column="LastmodifiedDate " not-null="true" />
-	<property name="LastmodifedBy" column="LastmodifedBy " not-null="true" />
-      </class>
+	<property name="phoneNumber" column="phoneNumber" not-null="true" />
+	<property name="email" column="email" />
+	<property name="password" column="password" not-null="true" />
+	<property name="type" column="type" not-null="true" />
+	<property name="fullName" column="fullName" not-null="true" />
+	<!--<property name="createdDate" column="createdDate" not-null="true" />-->
+	</class>
 </hibernate-mapping>

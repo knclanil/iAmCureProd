@@ -1,3 +1,4 @@
+
 package com.iamcure.util;
 
 import org.hibernate.CacheMode;

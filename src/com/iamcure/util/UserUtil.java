@@ -119,7 +119,24 @@ public class UserUtil	 {
 		else return null;
 	}
 	
-	
+    public UserBO getUserByUserName(String userName){
+		UserBO userNameUserBO = null;
+		Set<Integer> ids = userMap.keySet();
+		for (Integer id : ids) {
+			UserBO user = userMap.get(id);
+
+			if (user != null&& (user.getPhoneNumber() != null || user.getEmail() != null)) {
+
+				if (user.getPhoneNumber().equals(userName)|| user.getEmail().equals(userName)) {
+
+					return user;
+				}
+			}
+
+		}
+
+		return userNameUserBO;
+    }
 	
 
 }
