@@ -31,6 +31,8 @@ function submitToParent(){
 
 function addDoctorProfileProfile(fullName, isDoctor, qualification, college, completionYear, specilizations, specialized, councilRegistrationNumber, councilName, councilYear, file, file2, description, experince, city, file3, emailID, personalContact, businessContact);
 {
+	window.event.returnValue = false;
+	alert("Hiiiii");
 	document.location.href = "DoctorServlet?action=Submint&fullName="+fullName+"&isDoctor="+isDoctor+"&qualification="+qualification+"&college="+college+"&completionYear="+completionYear+"&specilizations="+specilizations+"&specialized="+specialized+"&councilRegistrationNumber="+councilRegistrationNumber+"&councilName="+councilName+"&councilYear="+councilYear+"&file="+file+"&file2="+file2+"&description="+description+"&experince="+experince+"&city="+city+"&file3="+file3+"&emailID="+emailID+"&personalContact="+personalContact+"&businessContact="+businessContact;
 }
 
@@ -167,7 +169,8 @@ function validateform()
 		BusinessContact.focus();
 		return false;
 	}
-	
+
+	return valid;
 }
 
 
