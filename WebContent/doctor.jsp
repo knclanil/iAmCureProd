@@ -27,7 +27,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="FULL NAME" placeholder="FULL NAME" class="form-control"  type="text">
+              <input name="fullName" id="fullName" placeholder="FULL NAME" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="QUALIFICATION" placeholder="QUALIFICATION" class="form-control"  type="text">
+              <input name="qualification" id="qualification" placeholder="QUALIFICATION" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="COLLEGE" placeholder="COLLEGE" class="form-control"  type="text">
+              <input name="college" id="college" placeholder="COLLEGE" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="COMPLETIONYEAR" placeholder="COMPLETIONYEAR" class="form-control"  type="text">
+              <input name="completionYear" id="completionYear"  placeholder="COMPLETIONYEAR" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
           <div class="col-md-4 selectContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-              <select name="SPECILIZATIONS" class="form-control selectpicker" >
+              <select name="specilizations" id="specilizations" class="form-control selectpicker" >
                 <option value=" " >Please select your SPECILIZATIONS</option>
                 <option>Anaesthesiology</option>
                 <option>Cardiology</option>
@@ -115,7 +115,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="COUNCIL REGISTRATIO NNUMBER" placeholder="COUNCIL REGISTRATIO NNUMBER" class="form-control"  type="text">
+              <input name="councilRegistrationNumber" id="councilRegistrationNumber" placeholder="COUNCIL REGISTRATIO NNUMBER" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="COUNCIL NAME" placeholder="COUNCIL NAME" class="form-control"  type="text">
+              <input name="councilName" id="councilName" placeholder="COUNCIL NAME" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="COUNCIL YEAR" placeholder="COUNCIL YEAR" class="form-control"  type="text">
+              <input name="councilYear" id="councilYear" placeholder="COUNCIL YEAR" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -144,7 +144,7 @@
           <label class="col-md-4 control-label">MEDICAL REGISTRATION CERTIFICATE</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-              <input type="file" class="form-control-file" id="MEDICAL REGISTRATION CERTIFICATE">
+              <input type="file" id="file" class="form-control-file" id="MEDICAL REGISTRATION CERTIFICATE">
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@
           <label class="col-md-4 control-label">DOCTOR ID PROOF</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-              <input type="file" class="form-control-file" id="DOCTOR IDPROOF">
+              <input type="file2" id="file2" class="form-control-file" id="DOCTOR IDPROOF">
             </div>
           </div>
         </div>
@@ -163,7 +163,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="DESCRIPTION" placeholder="DESCRIPTION" class="form-control"  type="text">
+              <input name="description" id="description" placeholder="DESCRIPTION" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="EXPERINCE" placeholder="EXPERINCE" class="form-control"  type="text">
+              <input name="experince" id="experince" placeholder="EXPERINCE" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -183,7 +183,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="CITY" placeholder="CITY" class="form-control"  type="text">
+              <input name="city" id="city" placeholder="CITY" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@
           <label class="col-md-4 control-label">DOCTOR PROFILE PICTURE</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-              <input type="file" class="form-control-file" id="DOCTOR PROFILE PICTURE">
+              <input type="file3" id="file3" class="form-control-file" id="DOCTOR PROFILE PICTURE">
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="EMAIL ID" placeholder="EMAIL ID" class="form-control"  type="text">
+              <input name="emailID" id="emailID" placeholder="EMAIL ID" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -212,7 +212,16 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="PERSONAL CONTACT" placeholder="PERSONAL CONTACT" class="form-control"  type="text">
+              <input name="personalContact" id="personalContact" placeholder="PERSONAL CONTACT" class="form-control"  type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label">BUSINESS CONTACT</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <input name="businessContact" id="businessContact" placeholder="PERSONAL CONTACT" class="form-control"  type="text">
             </div>
           </div>
         </div>

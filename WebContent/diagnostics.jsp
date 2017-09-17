@@ -35,7 +35,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input name="Diagnostic Center" placeholder="Diagnostic Center " class="form-control"  type="text">
+              <input name="diagnosticCenterName" id="diagnosticCenterName" placeholder="Diagnostic Center " class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
           <div class="col-md-4 selectContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-              <select name="country" class="form-control selectpicker" >
+              <select name="country" id="country"  class="form-control selectpicker" >
                 <option value=" " >Please select your country</option>
                 <option>India</option>
                 <option>United States</option>
@@ -59,7 +59,7 @@
           <div class="col-md-4 selectContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-              <select name="state" class="form-control selectpicker" >
+              <select name="state" id="state" class="form-control selectpicker" >
                 <option value=" " >Please select your state</option>
                 <option>Andaman and Nicobar Islands</option>
                 <option>Andhra Pradesh</option>
@@ -107,7 +107,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="City" placeholder="City" class="form-control"  type="text">
+              <input name="city" id="city" placeholder="City" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="Pincode" placeholder="Pincode" class="form-control"  type="text">
+              <input name="pincode" id="password" placeholder="Pincode" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input name="Streetname" placeholder="StreetName&Number" class="form-control"  type="text">
+              <input name="streetName" id="streetName" placeholder="StreetName&Number" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="phoneNumber" placeholder="+91 1234567890" class="form-control" type="text">
+              <input name="phoneNumber" id="phoneNumber" placeholder="+91 1234567890" class="form-control" type="text">
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@
           <label class="col-md-4 control-label">Diagnostic Center Picture</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-              <input type="file" class="form-control-file" id="Diagnostic Center Picture">
+              <input type="file" id="file" class="form-control-file" id="Diagnostic Center Picture">
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="Descripition" placeholder="Descripition" class="form-control" type="text">
+              <input name="descripition" id="descripition"  placeholder="Descripition" class="form-control" type="text">
             </div>
           </div>
         </div>
@@ -166,7 +166,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="StoreManager" placeholder="Name" class="form-control" type="text">
+              <input name="contactPerson" id="contactPerson" placeholder="Name" class="form-control" type="text">
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="Diagnostic Center LicenseNumber" placeholder="Diagnostic Center LicenseNumber" class="form-control" type="text">
+              <input name="diagnosticsCenterLicenseNumber" id="diagnosticsCenterLicenseNumber" placeholder="Diagnostic Center LicenseNumber" class="form-control" type="text">
             </div>
           </div>
         </div>
@@ -200,7 +200,7 @@
           <label class="col-md-4 control-label"> Diagnostic Center License Document </label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-              <input type="file" class="form-control-file" id="Diagnostic Center License Document">
+              <input type="file1" id="file1" class="form-control-file" id="Diagnostic Center License Document">
             </div>
             <!-- Success message -->
             <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Profile Updated </div>

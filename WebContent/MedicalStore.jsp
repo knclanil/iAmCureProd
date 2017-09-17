@@ -2,25 +2,33 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Bootstrapped Styled File Browse Button</title>
-    
-    
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Bootstrap 3 Contact form with Validation</title>
+    <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
     
   </head>
   <body>
     <div class="container">
       <form class="well form-horizontal" action=" " method="post"  id="Personal Profile">
         <!-- Form Name -->
-        <h1 class="display-4">Diagnostic Center Profile</h1>
-        <!-- Diagnostic Center  input-->
+        <h1 class="display-4">Medical Store Profile</h1>
+        <!-- MedicalstoreName  input-->
         <div class="form-group">
-          <label class="col-md-4 control-label">Diagnostic Center Name</label>
+          <label class="col-md-4 control-label">MedicalstoreName</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input name="Diagnostic Center" placeholder="Diagnostic Center " class="form-control"  type="text">
+              <input name="medicalstoreName" id="medicalstoreName" placeholder="MedicalstoreName " class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -30,7 +38,7 @@
           <div class="col-md-4 selectContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-              <select name="country" class="form-control selectpicker" >
+              <select name="country" id="country" class="form-control selectpicker" >
                 <option value=" " >Please select your country</option>
                 <option>India</option>
                 <option>United States</option>
@@ -44,7 +52,7 @@
           <div class="col-md-4 selectContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-              <select name="state" class="form-control selectpicker" >
+              <select name="state" id="state" class="form-control selectpicker" >
                 <option value=" " >Please select your state</option>
                 <option>Andaman and Nicobar Islands</option>
                 <option>Andhra Pradesh</option>
@@ -77,7 +85,7 @@
                 <option>Rajasthan</option>
                 <option>Sikkim</option>
                 <option>Tamil Nadu</option>
-                <option>Telangana</option>>
+                <option>Telangana</option>
                 <option>Tripura</option>
                 <option>Uttar Pradesh</option>
                 <option>Uttarakhand</option>
@@ -92,7 +100,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="City" placeholder="City" class="form-control"  type="text">
+              <input name="city" id="city" placeholder="City" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -102,17 +110,17 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="Pincode" placeholder="Pincode" class="form-control"  type="text">
+              <input name="pinCode" id="pinCode" placeholder="Pincode" class="form-control"  type="text">
             </div>
           </div>
         </div>
         <!-- Stree name input-->
         <div class="form-group">
-          <label class="col-md-4 control-label">Street Number & Name</label>
+          <label class="col-md-4 control-label">Street Number& Name</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input name="Streetname" placeholder="StreetName&Number" class="form-control"  type="text">
+              <input name="streetName" id="streetName" placeholder="StreetName&Number" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -122,43 +130,44 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="phoneNumber" placeholder="+91 1234567890" class="form-control" type="text">
+              <input name="phoneNumber" id="phoneNumber" placeholder="+91 1234567890" class="form-control" type="text">
             </div>
           </div>
         </div>
         <!-- MedicalStorePicture  input-->
         <div class="form-group">
-          <label class="col-md-4 control-label">Diagnostic Center Picture</label>
+          <label class="col-md-4 control-label">MedicalStorePicture</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-              <input type="file" class="form-control-file" id="Diagnostic Center Picture">
+              <input type="file" class="form-control-file" id="medicalStorePicture">
             </div>
           </div>
         </div>
         <!-- Descripition  input-->
         <div class="form-group">
-          <label class="col-md-4 control-label">About Diagnostic Center</label>
+          <label class="col-md-4 control-label">About Store</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="Descripition" placeholder="Descripition" class="form-control" type="text">
+              <input name="descripition" id="descripition" placeholder="Descripition" class="form-control" type="text">
             </div>
           </div>
         </div>
         <!-- ContactPerson  input-->
         <div class="form-group">
-          <label class="col-md-4 control-label">Diagnostic Center Manager</label>
+          <label class="col-md-4 control-label">StoreManager</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="StoreManager" placeholder="Name" class="form-control" type="text">
+              <input name="contactPerson" id="contactPerson" placeholder="Name" class="form-control" type="text">
             </div>
           </div>
         </div>
         <!-- IsVerified  input-->
-        <!-- Samples Pickup input-->
+        
+        <!-- DrugDelivery  input-->
         <div class="form-group">
-          <label class="col-md-4 control-label">Samples Pickup Available </label>
+          <label class="col-md-4 control-label">Medicines Devlivery Available </label>
           <label class="custom-control custom-radio">
             <input id="radio1" name="radio" type="radio" class="custom-control-input">
             <span class="custom-control-indicator"></span>
@@ -170,33 +179,34 @@
             <span class="custom-control-description">No</span>
           </label>
         </div>
-        <!-- Diagnostic Center LicenseNumber  input-->
+        <!-- DrugLicenseNumber  input-->
         <div class="form-group">
-          <label class="col-md-4 control-label">Diagnostic Center LicenseNumber</label>
+          <label class="col-md-4 control-label">DrugLicenseNumber</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="Diagnostic Center LicenseNumber" placeholder="Diagnostic Center LicenseNumber" class="form-control" type="text">
+              <input name="drugLicenseNumber" id="drugLicenseNumber" placeholder="DrugLicenseNumber" class="form-control" type="text">
             </div>
           </div>
         </div>
-        <!-- Diagnostic Center License Document-->
+        <!-- DrugLicenseDocument  input-->
         <div class="form-group">
-          <label class="col-md-4 control-label"> Diagnostic Center License Document </label>
+          <label class="col-md-4 control-label"> DrugLicenseDocument </label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-              <input type="file" class="form-control-file" id="Diagnostic Center License Document">
+              <input type="file" id="drugLicenseDocument" class="form-control-file" id="DrugLicenseDocument">
             </div>
-            <!-- Success message -->
-            <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Profile Updated </div>
-            <!-- Button -->
-            <div class="form-group">
-              <label class="col-md-4 control-label"></label>
-              <div class="col-md-4">
-              <button type="submit" class="btn btn-warning" onclick="submitToParent()">Submit</span></button>
-            </div>
-          </div>
-          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-          <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-          <script src="js/index.js"></script>
-        </html>
+           </div>
+           </div>
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Profile Updated </div>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+  <button type="submit" class="btn btn-warning" onclick="submitToMedicalStore()">Submit</span></button>
+</div>
+</div>
+</form>
+</div>
+</html>

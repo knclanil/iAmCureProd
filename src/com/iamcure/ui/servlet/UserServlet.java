@@ -29,6 +29,7 @@ public class UserServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("in user servlet doget");
 		String action=request.getParameter("action");
 		String phoneNumber = request.getParameter("phoneNumber");
 		String email=request.getParameter("email");
@@ -48,7 +49,8 @@ public class UserServlet extends HttpServlet {
 		
 		}else if(action.equalsIgnoreCase("Authentication")){
 		String username=request.getParameter("username");
-		System.out.println("userName::"+username+"--->Password::"+password);
+		String userPassword=request.getParameter("userpassword");
+		System.out.println("userName::"+username+"--->userPassword::"+userPassword);
 		
 		if(username!=null&&username.length()>0){
 			
@@ -57,7 +59,7 @@ public class UserServlet extends HttpServlet {
 			if(user==null)
 				sendResponse(response,"user.jsp?Response="+URLEncoder.encode("UserName is Not found!!"));
 			
-			if(user.getPassword().equals(password)){
+			if(user.getPassword().equals(userPassword)){
 				sendResponse(response,"user.jsp?Response="+URLEncoder.encode("Success Fully login"));
 			}else{
 				sendResponse(response,"user.jsp?Response="+URLEncoder.encode("Password is Incorect!!"));
@@ -79,8 +81,6 @@ public class UserServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
-		
-		
 	}
 
 	private void sendResponse(HttpServletResponse response,String page)

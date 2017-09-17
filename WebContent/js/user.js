@@ -15,18 +15,19 @@ function submitToParent(){
 	
 }
 
+
+function autenticateUser(username,password){
+	alert("hi");
+	//document.location.href="UserServlet?action=Register&phoneNumber=12345&email=nav&fullName=masava&password=sac";
+	document.location.href="UserServlet?action=Authentication&username=9705755597&userpassword=krishna5799";
+}
+
 function addUser(phoneNumber,email,fullName,password,confirmPassword){
 	
-	document.location.href ="UserServlet?action=Register&phoneNumber="+phoneNumber+"&email="+email+"&fullName="+fullName+"&password="+password;
+	document.location.href="UserServlet?action=Register&phoneNumber="+phoneNumber+"&email="+email+"&fullName="+fullName+"&password="+password;
 	
 }
 
-function autenticateUser(username,password){
-	
-	document.location.href ="UserServlet?action=Authentication&username="+username+"&password="+password;
-	alert("action is authentication::");
-	
-}
 
 function validateform()
 {
@@ -78,21 +79,21 @@ function validateform()
 
 function submitToLogin(){
 	
-	 var username=document.getElementById("username").value;
-	 var password=document.getElementById("password").value;
+	 var username=document.getElementById("userUserName").value;
+	 var password=document.getElementById("userPassword").value;
 	 
 	 if(validateLoginFields()){
 		 autenticateUser(username,password); 
-	 }else{
-		 return false;
-	 }
+	 }else
+	return false;
+	 
 }
 
 function validateLoginFields()
 {
 	var 	valid= true;
-	var		username= document.getElementById("username");
-	var	 	password= document.getElementById("password");
+	var		username= document.getElementById("userUserName");
+	var	 	password= document.getElementById("userPassword");
 	
 	if(username.value=='' )
 	{

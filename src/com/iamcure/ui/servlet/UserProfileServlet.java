@@ -30,6 +30,7 @@ public class UserProfileServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		System.out.println("Enter into user servlet");
 		String userId=request.getParameter("userId");
 		String firstName=request.getParameter("firstName");
 		String lastName=request.getParameter("lastName");

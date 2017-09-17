@@ -1,108 +1,82 @@
 function submitToPatient(){
 	
-		var User_ID=document.getElementById("User_ID").value();
-		var First_Name=document.getElementById("First_Name").value();
-		var Last_Name=document.getElementById("Last_Name").value();
-		var image=document.getElementById("image").value();
-		var Releationship=document.getElementById("Releationship").value();
-		var Date_Of_Birth=document.getElementById("Date_Of_Birth").value();
-		var AdharCard_Number=document.getElementById("AdharCard_Number").value();
-		var country=document.getElementById("country").value();
-		var State=document.getElementById("State").value();
-		var Pincode=document.getElementById("Pincode").value();
-		var City=document.getElementById("City").value();
-		var Address_1=document.getElementById("Address_1").value();
-		var Address_2=document.getElementById("Address_2").value();
-		var Phone_Number=document.getElementById("Phone_Number").value();
-		var E_Mail_ID=document.getElementById("E_Mail_ID").value();
-		var Emergenc_Contact=document.getElementById("Emergenc_Contact").value();
-		var Emergenc_Contact_2=document.getElementById("Emergenc_Contact_2").value();
+		var firstname=document.getElementById("firstname").value;
+		var lastname=document.getElementById("lastname").value;
+		var releationship=document.getElementById("releationship").value;
+		var dob=document.getElementById("dob").value;
+		var adharCardnumber=document.getElementById("adharCardnumber").value;
+		var country=document.getElementById("country").value;
+		var state=document.getElementById("state").value;
+		var pincode=document.getElementById("pincode").value;
+		var city=document.getElementById("city").value;
+		var houseNumber=document.getElementById("houseNumber").value;
+		var streetname=document.getElementById("streetname").value;
+		var phoneNumber=document.getElementById("phoneNumber").value;
+		var email=document.getElementById("email").value;
+		var emergencContact=document.getElementById("emergencContact").value;
+		//var Emergenc_Contact_2=document.getElementById("Emergenc_Contact_2").value;
 		
 	
 	if(validateform())
 	{
-           addUserProfile( User_ID, First_Name, Last_Name, image, Releationship, Date_Of_Birth, 
-		   AdharCard_Number, country, State, Pincode, City, Address_1, Address_2, Phone_Number, E_Mail_ID, Emergenc_Contact, 
-		   Emergenc_Contact_2);
+           addUserProfile( firstname,lastname,releationship,dob,adharCardnumber,country,state,pincode,city,houseNumber,streetname,phoneNumber,email, emergencContact);
 	}else 
 		return false;
 	
 }
 
-function addUserProfile( User_ID, First_Name, Last_Name, image, Releationship, Date_Of_Birth, 
-		   AdharCard_Number, country, State, Pincode, City, Address_1, Address_2, Phone_Number, E_Mail_ID, Emergenc_Contact, 
-		   Emergenc_Contact_2, CreateDate, CreatedBy, LastModifiedBy, LastModified_Date){
-	document.location.href = "UserProfileServlet?action=Submint&User_ID="+User_ID +"&First_Name="+First_Name +"&Last_Name="+Last_Name +"&image="+image +"&Releationship="+Releationship +"&Date_Of_Birth="+Date_Of_Birth +"&AdharCard_Number="+AdharCard_Number +"&country="+country +"&State="+State +"&Pincode="+Pincode +"&City="+City +"&Address_1="+Address_1 +"&Address_2="+Address_2 +"&Phone_Number="+Phone_Number +"&E_Mail_ID="+E_Mail_ID +"&Emergenc_Contact="+Emergenc_Contact +"&Emergenc_Contact_2="+Emergenc_Contact_2;
+function addUserProfile( firstname,lastname,releationship,dob,adharCardnumber,country,state,pincode,city,houseNumber,streetname,phoneNumber,email, emergencContact, CreateDate, CreatedBy, LastModifiedBy, LastModified_Date){
+	document.location.href = "UserProfileServlet?action=Submint&&firstname="+firstname+"&lastname="+lastname+"&releationship="+releationship+"&dob="+dob+"&adharCardnumber="+adharCardnumber+"&country="+country+"&state="+state+"&pincode="+pincode+"&city="+city+"&houseNumber="+houseNumber+"&streetname="+streetname+"&phoneNumber="+phoneNumber+"&email="+email+"&emergencContact="+emergencContact;
 }
 
 
 function validateform()
 {
 	var 	valid= true;
-	var U_ID=document.getElementById("U_ID").value();
-	var User_ID=document.getElementById("User_ID").value();
-	var First_Name=document.getElementById("First_Name").value();
-	var Last_Name=document.getElementById("Last_Name").value();
-	var image=document.getElementById("image").value();
-	var Releationship=document.getElementById("Releationship").value();
-	var Date_Of_Birth=document.getElementById("Date_Of_Birth").value();
-	var AdharCard_Number=document.getElementById("AdharCard_Number").value();
-	var country=document.getElementById("country").value();
-	var State=document.getElementById("State").value();
-	var Pincode=document.getElementById("Pincode").value();
-	var City=document.getElementById("City").value();
-	var Address_1=document.getElementById("Address_1").value();
-	var Address_2=document.getElementById("Address_2").value();
-	var Phone_Number=document.getElementById("Phone_Number").value();
-	var E_Mail_ID=document.getElementById("E_Mail_ID").value();
-	var Emergenc_Contact=document.getElementById("Emergenc_Contact").value();
-	var Emergenc_Contact_2=document.getElementById("Emergenc_Contact_2").value();
-	var CreateDate=document.getElementById("CreateDate").value();
-	var CreatedBy=document.getElementById("CreatedBy").value();
-	var LastModifiedBy=document.getElementById("LastModifiedBy").value();
-	var LastModified_Date=document.getElementById("LastModified_Date").value();
+	var firstname=document.getElementById("firstname");
+	var lastname=document.getElementById("lastname");
+	var releationship=document.getElementById("releationship");
+	var dob=document.getElementById("dob");
+	var adharCardnumber=document.getElementById("adharCardnumber");
+	var country=document.getElementById("country");
+	var state=document.getElementById("state");
+	var pincode=document.getElementById("pincode");
+	var city=document.getElementById("city");
+	var houseNumber=document.getElementById("houseNumber");
+	var streetname=document.getElementById("streetname");
+	var phoneNumber=document.getElementById("phoneNumber");
+	var email=document.getElementById("email");
+	var emergencContact=document.getElementById("emergencContact");
 	
 	
-	if(phoneNumber.value=='' )
+	if (firstname.value=='')
 	{
-		alert("please enter PhoneNumber!");
-		phoneNumber.focus();
+		alert("please enter firstname!");
+		firstname.focus();
 		return false;
 	}
-	else if (First_Name.value=='')
+	else if (lastname.value=='')
 	{
-		alert("please enter First_Name!");
-		First_Name.focus();
+		alert("please enter lastname!");
+		lastname.focus();
 		return false;
 	}
-	else if (Last_Name.value=='')
+	else if (releationship.value=='')
 	{
-		alert("please enter Last_Name!");
-		Last_Name.focus();
+		alert("please enter releationship!");
+		releationship.focus();
 		return false;
 	}
-	else if (image.value=='')
+	else if (dob.value=='')
 	{
-		alert("please enter image!");
-		image.focus();
+		alert("please enter dob!");
+		dob.focus();
 		return false;
 	}
-	else if (Releationship.value=='')
+	else if (adharCardnumber.value=='')
 	{
-		alert("please enter Releationship!");
-		Releationship.focus();
-		return false;
-	}
-	else if (Date_Of_Birth.value=='')
-	{
-		alert("please enter Date_Of_Birth!");
-		Date_Of_Birth.focus();
-		return false;
-	}
-	else if (AdharCard_Number.value=='')
-	{
-		alert("please enter AdharCard_Number!");
-		AdharCard_Number.focus();
+		alert("please enter adharCardnumber!");
+		adharCardnumber.focus();
 		return false;
 	}
 	else if (country.value=='')
@@ -111,66 +85,56 @@ function validateform()
 		country.focus();
 		return false;
 	}
-	else if (State.value=='')
+	else if (state.value=='')
 	{
-		alert("please enter State!");
-		State.focus();
+		alert("please enter state!");
+		state.focus();
 		return false;
 	}
-	else if (Pincode.value=='')
+	else if (pincode.value=='')
 	{
-		alert("please enter Pincode!");
-		Pincode.focus();
+		alert("please enter pincode!");
+		pincode.focus();
 		return false;
 	}
-	else if (City.value=='')
+	else if (city.value=='')
 	{
-		alert("please enter City!");
-		City.focus();
+		alert("please enter city!");
+		city.focus();
 		return false;
 	}
-		else if (Address_1.value=='')
+		else if (houseNumber.value=='')
 	{
-		alert("please enter Address_1!");
-		Address_1.focus();
+		alert("please enter houseNumber!");
+		houseNumber.focus();
 		return false;
 	}
-		else if (Address_2.value=='')
+		else if (streetname.value=='')
 	{
-		alert("please enter Address_2!");
-		Address_2.focus();
+		alert("please enter streetname!");
+		streetname.focus();
 		return false;
 	}
-	else if (Phone_Number.value=='')
+	else if (phoneNumber.value=='')
 	{
-		alert("please enter Phone_Number!");
-		Phone_Number.focus();
-		return false;
-	}
-	else if (E_Mail_ID.value=='')
-	{
-		alert("please enter E_Mail_ID!");
-		E_Mail_ID.focus();
-		return false;
-	}
-	else if (Emergenc_Contact.value=='')
-	{
-		alert("please enter Emergenc_Contact!");
-		Emergenc_Contact.focus();
-		return false;
-	}
-	else if (Emergenc_Contact_2.value=='')
-	{
-		alert("please enter Emergenc_Contact_2!");
-		Emergenc_Contact_2.focus();
+		alert("please enter phoneNumber!");
+		phoneNumber.focus();
 		return false;
 	}
 	else if (email.value=='')
 	{
-		alert("please enter Email!");
+		alert("please enter email!");
 		email.focus();
 		return false;
 	}
+	else if (emergencContact.value=='')
+	{
+		alert("please enter emergencContact!");
+		emergencContact.focus();
+		return false;
+	}
+	
+	return valid;
 }
 
 

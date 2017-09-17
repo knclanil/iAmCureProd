@@ -94,10 +94,10 @@
               <div class="col-lg-12">
                 <form id="login-form" action="#" method="post" role="form" style="display: block;">
                   <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                    <input type="text" name="userUserName" id="userUserName" tabindex="1" class="form-control" placeholder="Username" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                    <input type="password" name="userPassword" id="userPassword" tabindex="2" class="form-control" placeholder="Password">
                   </div>
                   <div class="form-group text-center">
                     <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
@@ -106,8 +106,8 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-sm-6 col-sm-offset-3">
-                        <input type="submit" name="login-submit" id="login-submit" 
-                        tabindex="4" class="form-control btn btn-login" value="Log In" onclick="submitToLogin()">
+                        <input type="submit"  
+                        tabindex="4" class="form-control btn btn-login" value=" " onclick="submitToLogin()">
                       </div>
                     </div>
                   </div>

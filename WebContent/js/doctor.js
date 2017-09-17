@@ -3,60 +3,59 @@ function submitToParent(){
 		var fullName=document.getElementById("fullName").value;
 		var isDoctor=document.getElementById("isDoctor").value;
 		var qualification=document.getElementById("qualification").value;
-		var College=document.getElementById("College").value;
-		var CompletionYear=document.getElementById("CompletionYear").value;
-		var Specilizations=document.getElementById("Specilizations").value;
+		var College=document.getElementById("college").value;
+		var CompletionYear=document.getElementById("completionYear").value;
+		var Specilizations=document.getElementById("specilizations").value;
 		var specialized=document.getElementById("specialized").value;
-		var CouncilRegistrationNumber=document.getElementById("CouncilRegistrationNumber").value;
-		var CouncilName=document.getElementById("CouncilName").value;
-		var CouncilYear=document.getElementById("CouncilYear").value;
-		var CertificatePath=document.getElementById("CertificatePath").value;
-		var IDProofPath=document.getElementById("IDProofPath").value;
-		var isMedicalRegistrationverify=document.getElementById("isMedicalRegistrationverify").value;
-		var Description=document.getElementById("Description").value;
-		var Experince=document.getElementById("Experince").value;
-		var City=document.getElementById("City").value;
-		var DoctorImagePath=document.getElementById("DoctorImagePath").value;
-		var EmailID=document.getElementById("EmailID").value;
-		var PersonalContact=document.getElementById("PersonalContact").value;
-		var BusinessContact=document.getElementById("BusinessContact").value;
+		var CouncilRegistrationNumber=document.getElementById("councilRegistrationNumber").value;
+		var CouncilName=document.getElementById("councilName").value;
+		var CouncilYear=document.getElementById("councilYear").value;
+		var CertificatePath=document.getElementById("file").value;
+		var IDProofPath=document.getElementById("file2").value;
+		var Description=document.getElementById("description").value;
+		var Experince=document.getElementById("experince").value;
+		var City=document.getElementById("city").value;
+		var DoctorImagePath=document.getElementById("file3").value;
+		var EmailID=document.getElementById("emailID").value;
+		var PersonalContact=document.getElementById("personalContact").value;
+		var BusinessContact=document.getElementById("businessContact").value;
 		
 	
 	if(validateform())
 	{
-           addDoctorProfileProfile(fullName, isDoctor, qualification, College, CompletionYear, Specilizations, specialized, CouncilRegistrationNumber, CouncilName, CouncilYear, CertificatePath, IDProofPath, isMedicalRegistrationverify, Description, Experince, City, DoctorImagePath, EmailID, PersonalContact, BusinessContact);
+           addDoctorProfileProfile(fullName, isDoctor, qualification, college, completionYear, specilizations, specialized, councilRegistrationNumber, councilName, councilYear, file, file2, description, experince, city, file3, emailID, personalContact, businessContact);
 	}else 
 		return false;
 	
 }
 
-function addDoctorProfileProfile(fullName, isDoctor, qualification, College, CompletionYear, Specilizations, specialized, CouncilRegistrationNumber, CouncilName, CouncilYear, CertificatePath, IDProofPath, isMedicalRegistrationverify, Description, Experince, City, DoctorImagePath, EmailID, PersonalContact, BusinessContact);
+function addDoctorProfileProfile(fullName, isDoctor, qualification, college, completionYear, specilizations, specialized, councilRegistrationNumber, councilName, councilYear, file, file2, description, experince, city, file3, emailID, personalContact, businessContact);
 {
-	document.location.href = "DoctorServlet?action=Submint&fullName="+fullName+ "&isDoctor="+isDoctor+ "&qualification="+qualification+ "&College="+College+ "&CompletionYear="+CompletionYear+ "&Specilizations="+Specilizations+ "&specialized="+specialized+ "&CouncilRegistrationNumber="+CouncilRegistrationNumber+ "&CouncilName="+CouncilName+ "&CouncilYear="+CouncilYear+ "&CertificatePath="+CertificatePath+ "&IDProofPath="+IDProofPath+ "&isMedicalRegistrationverify="+isMedicalRegistrationverify+ "&Description="+Description+ "&Experince="+Experince+ "&City="+City+ "&DoctorImagePath="+DoctorImagePath+ "&EmailID="+EmailID+ "&PersonalContact="+PersonalContact+ "&BusinessContact="+BusinessContact;
+	document.location.href = "DoctorServlet?action=Submint&fullName="+fullName+"&isDoctor="+isDoctor+"&qualification="+qualification+"&college="+college+"&completionYear="+completionYear+"&specilizations="+specilizations+"&specialized="+specialized+"&councilRegistrationNumber="+councilRegistrationNumber+"&councilName="+councilName+"&councilYear="+councilYear+"&file="+file+"&file2="+file2+"&description="+description+"&experince="+experince+"&city="+city+"&file3="+file3+"&emailID="+emailID+"&personalContact="+personalContact+"&businessContact="+businessContact;
 }
 
 
 function validateform()
 {
-		var fullName=document.getElementById("fullName").value;
-		var qualification=document.getElementById("qualification").value;
-		var College=document.getElementById("College").value;
-		var CompletionYear=document.getElementById("CompletionYear").value;
-		var Specilizations=document.getElementById("Specilizations").value;
-		var specialized=document.getElementById("specialized").value;
-		var CouncilRegistrationNumber=document.getElementById("CouncilRegistrationNumber").value;
-		var CouncilName=document.getElementById("CouncilName").value;
-		var CouncilYear=document.getElementById("CouncilYear").value;
-		var CertificatePath=document.getElementById("CertificatePath").value;
-		var IDProofPath=document.getElementById("IDProofPath").value;
-		var isMedicalRegistrationverify=document.getElementById("isMedicalRegistrationverify").value;
-		var Description=document.getElementById("Description").value;
-		var Experince=document.getElementById("Experince").value;
-		var City=document.getElementById("City").value;
-		var DoctorImagePath=document.getElementById("DoctorImagePath").value;
-		var EmailID=document.getElementById("EmailID").value;
-		var PersonalContact=document.getElementById("PersonalContact").value;
-		var BusinessContact=document.getElementById("BusinessContact").value;
+	var fullName=document.getElementById("fullName");
+	var isDoctor=document.getElementById("isDoctor");
+	var qualification=document.getElementById("qualification");
+	var College=document.getElementById("college");
+	var CompletionYear=document.getElementById("completionYear");
+	var Specilizations=document.getElementById("specilizations");
+	var specialized=document.getElementById("specialized");
+	var CouncilRegistrationNumber=document.getElementById("councilRegistrationNumber");
+	var CouncilName=document.getElementById("councilName");
+	var CouncilYear=document.getElementById("councilYear");
+	var CertificatePath=document.getElementById("file");
+	var IDProofPath=document.getElementById("file2");
+	var Description=document.getElementById("description");
+	var Experince=document.getElementById("experince");
+	var City=document.getElementById("city");
+	var DoctorImagePath=document.getElementById("file3");
+	var EmailID=document.getElementById("emailID");
+	var PersonalContact=document.getElementById("personalContact");
+	var BusinessContact=document.getElementById("businessContact");
 	
 	
 	if(fullName.value=='' )

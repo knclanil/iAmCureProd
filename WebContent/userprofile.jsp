@@ -3,16 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
-    
+	<link rel="stylesheet" type="text/css" href="css/userprofile.css" />
+    <script type="text/javascript" src="js/user.js"></script>
+  
   </head>
   <body>
     <div class="container">
@@ -26,7 +19,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input name="firstname" placeholder="First_Name " class="form-control"  type="text">
+                <input name="firstname" id="firstname" placeholder="First_Name " class="form-control"  type="text">
               </div>
             </div>
           </div>
@@ -36,7 +29,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                <input name="lastname" placeholder="Last_Name " class="form-control"  type="text">
+                <input name="lastname" id="lastname" placeholder="Last_Name " class="form-control"  type="text">
               </div>
             </div>
           </div>
@@ -46,7 +39,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input name="releationship" placeholder="Releationship " class="form-control"  type="text">
+                <input name="releationship" id="releationship" placeholder="Releationship " class="form-control"  type="text">
               </div>
             </div>
           </div>
@@ -56,7 +49,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input placeholder="Date_Of_Birth" class="form-control"  type="Date">
+                <input placeholder="Date_Of_Birth" name="dob" id="dob" class="form-control"  type="Date">
               </div>
             </div>
           </div>
@@ -67,7 +60,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                <input name="adharCardnumber" placeholder="AdharCard_Number " class="form-control"  type="text">
+                <input id="adharCardnumber" name="adharCardnumber" placeholder="AdharCard_Number " class="form-control"  type="text">
               </div>
             </div>
           </div>
@@ -76,7 +69,7 @@
             <div class="col-md-4 selectContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                <select name="country" class="form-control selectpicker" >
+                <select name="country" id="country" class="form-control selectpicker" >
                   <option value=" " >Please select your country</option>
                   <option>India</option>
                   <option>United States</option>
@@ -91,7 +84,7 @@
             <div class="col-md-4 selectContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                <select name="state" class="form-control selectpicker" >
+                <select name="state" id="state" class="form-control selectpicker" >
                   <option value=" " >Please select your state</option>
                   <option>Andaman and Nicobar Islands</option>
                   <option>Andhra Pradesh</option>
@@ -139,7 +132,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                <input name="Pincode" placeholder="Pincode" class="form-control"  type="text">
+                <input name="pincode" id="pincode" placeholder="Pincode" class="form-control"  type="text">
               </div>
             </div>
           </div>
@@ -149,7 +142,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                <input name="City" placeholder="City" class="form-control"  type="text">
+                <input name="city" id="city" placeholder="City" class="form-control"  type="text">
               </div>
             </div>
           </div>
@@ -159,7 +152,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <input name="HouseNumber" placeholder="HouseNumber" class="form-control"  type="text">
+                <input name="houseNumber" id="houseNumber" placeholder="HouseNumber" class="form-control"  type="text">
               </div>
             </div>
           </div>
@@ -169,18 +162,27 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <input name="Streetname" placeholder="StreetName" class="form-control"  type="text">
+                <input name="streetname" id="streetname" placeholder="StreetName" class="form-control"  type="text">
               </div>
             </div>
           </div>
           <!--Phone Number Text input-->
           
           <div class="form-group">
-            <label class="col-md-4 control-label">PhoneNumber #</label>
+            <label class="col-md-4 control-label">PhoneNumber</label>
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                <input name="phoneNumber" placeholder="+91 1234567890" class="form-control" type="text">
+                <input name="phoneNumber" id="phoneNumber" placeholder="+91 1234567890" class="form-control" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label">E-Mail ID</label>
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                <input name="email" id="email" placeholder="+91 1234567890" class="form-control" type="text">
               </div>
             </div>
           </div>
@@ -191,7 +193,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input name="Emergenc_Contact" placeholder=" Family or Friend" class="form-control" type="text">
+                <input name="emergencContact" id="emergencContact" placeholder=" Family or Friend" class="form-control" type="text">
               </div>
             </div>
           </div>
@@ -206,13 +208,6 @@
           </div>
         </fieldset>
       </form>
-    </div>
     </div><!-- /.container -->
-    
-    <script type="text/javascript">
-    $(function () {
-    $('#datetimepicker1').datetimepicker();
-    });
-    </script>
   </body>
 </html>
