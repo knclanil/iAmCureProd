@@ -26,7 +26,9 @@ function submitToPatient(){
 }
 
 function addUserProfile( firstname,lastname,releationship,dob,adharCardnumber,country,state,pincode,city,houseNumber,streetname,phoneNumber,email, emergencContact, CreateDate, CreatedBy, LastModifiedBy, LastModified_Date){
-	document.location.href = "UserProfileServlet?action=Submint&&firstname="+firstname+"&lastname="+lastname+"&releationship="+releationship+"&dob="+dob+"&adharCardnumber="+adharCardnumber+"&country="+country+"&state="+state+"&pincode="+pincode+"&city="+city+"&houseNumber="+houseNumber+"&streetname="+streetname+"&phoneNumber="+phoneNumber+"&email="+email+"&emergencContact="+emergencContact;
+	window.event.returnValue = false;
+	alert("Hiiiii");
+	document.location.href ="UserProfileServlet?action=Submint&operation=create&firstname="+firstname+"&lastname="+lastname+"&releationship="+releationship+"&dob="+dob+"&adharCardnumber="+adharCardnumber+"&country="+country+"&state="+state+"&pincode="+pincode+"&city="+city+"&houseNumber="+houseNumber+"&streetname="+streetname+"&phoneNumber="+phoneNumber+"&email="+email+"&emergencContact="+emergencContact;
 }
 
 

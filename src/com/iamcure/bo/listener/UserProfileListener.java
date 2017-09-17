@@ -16,13 +16,15 @@ public class UserProfileListener {
 			String address2, String phoneNumber, String emailId,
 			String emergencyContact, String createdBy, String modifiledBy,
 			String operation) {
-		
+        
+		if(operation==null)
+			return false;
 		
 		UserProfileBO userProfile = new UserProfileBO();
-		userProfile.setUser_id(userId);
+		userProfile.setUser_id("1");
 		userProfile.setFirst_Name(firstName);
 		userProfile.setLast_Name(lastName);
-		userProfile.setImage(imagePath);
+		userProfile.setImage("krishnaImagePath");
 		userProfile.setReleation(relation);
 		userProfile.setDate_Of_Birth(dob);
 		userProfile.setAdharCard_Number(adharCard);
@@ -38,9 +40,10 @@ public class UserProfileListener {
 
 		if (operation.equals("create")) {
 			
-			userProfile.setCreatedBy(createdBy);
+			userProfile.setCreatedBy("krishna");
 			userProfile.setCreatedDate(Calendar.getInstance());
-
+			userProfile.setLastModifiedBy("krishna");
+			userProfile.setLastModified_Date(Calendar.getInstance());
 			if (UserProfileDAO.createuser(userProfile)) {
 				UserProfileUtil.getInstance().constructMap();
 				return true;

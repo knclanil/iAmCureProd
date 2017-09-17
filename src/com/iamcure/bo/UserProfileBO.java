@@ -27,7 +27,7 @@ public class UserProfileBO {
 	private String Pincode;
 	
 	private String City;
-	
+		
 	private String Address1;
 	
 	private String Address2;
@@ -37,8 +37,6 @@ public class UserProfileBO {
 	private String E_Mail_ID;
 	
 	private String Emergenc_Contact;
-	
-	private String Emergenc_Contact_2;
 	
 	private Calendar createdDate;
 	
@@ -183,14 +181,6 @@ public class UserProfileBO {
 
 	public void setEmergenc_Contact(String emergenc_Contact) {
 		Emergenc_Contact = emergenc_Contact;
-	}
-
-	public String getEmergenc_Contact_2() {
-		return Emergenc_Contact_2;
-	}
-
-	public void setEmergenc_Contact_2(String emergenc_Contact_2) {
-		Emergenc_Contact_2 = emergenc_Contact_2;
 	}
 
 	public Calendar getCreatedDate() {

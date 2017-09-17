@@ -17,13 +17,14 @@ function submitToParent(){
 
 
 function autenticateUser(username,password){
+	window.event.returnValue = false;
 	alert("hi");
 	//document.location.href="UserServlet?action=Register&phoneNumber=12345&email=nav&fullName=masava&password=sac";
 	document.location.href="UserServlet?action=Authentication&username=9705755597&userpassword=krishna5799";
 }
 
 function addUser(phoneNumber,email,fullName,password,confirmPassword){
-	
+	window.event.returnValue = false;
 	document.location.href="UserServlet?action=Register&phoneNumber="+phoneNumber+"&email="+email+"&fullName="+fullName+"&password="+password;
 	
 }

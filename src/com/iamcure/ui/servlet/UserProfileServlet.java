@@ -31,21 +31,21 @@ public class UserProfileServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		System.out.println("Enter into user servlet");
-		String userId=request.getParameter("userId");
+		String user_Id=request.getParameter("userId");
 		String firstName=request.getParameter("firstName");
 		String lastName=request.getParameter("lastName");
 		String image=request.getParameter("image");
 		String releation=request.getParameter("releation");
-		String dateOfBirth=request.getParameter("dateOfBirth");
+		String dateOfBirth=request.getParameter("dob");
 		String adharcardNumber=request.getParameter("adharcardNumber");
 		String country=request.getParameter("country");
 		String state=request.getParameter("state");
 		String pincode=request.getParameter("pincode");
 		String city=request.getParameter("city");
-		String address1=request.getParameter("address1");
-		String address2=request.getParameter("address2");
+		String address1=request.getParameter("houseNumber");
+		String address2=request.getParameter("streetname");
 		String phoneNumber=request.getParameter("phoneNumber");
-		String eMailId=request.getParameter("eMailId");
+		String eMailId=request.getParameter("email");
 		String emergencContact=request.getParameter("emergencContact");
 		String createdBy=request.getParameter("createdBy");
 		String modifiledBy=request.getParameter("modifiledBy");
@@ -57,7 +57,7 @@ public class UserProfileServlet extends HttpServlet {
 		
 		Calendar 	dateOfBirthCal=DateUtil.getCalFromDbFormatString(dateOfBirth);
 		
-		UserProfileListener.createOrUpdateUserProfile(userId, firstName, lastName, image, releation, dateOfBirthCal,
+		UserProfileListener.createOrUpdateUserProfile(user_Id, firstName, lastName, image, releation, dateOfBirthCal,
 				adharcardNumber, country, state, city, pincode, address1, address2, phoneNumber,eMailId, 
 				emergencContact, createdBy, modifiledBy, operation);
 		
