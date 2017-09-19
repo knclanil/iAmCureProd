@@ -25,9 +25,9 @@
 	<property name="EmailID" column="EmailID " not-null="true" />
 	<property name="PersonalContact" column="PersonalContact " not-null="true" />
 	<property name="BusinessContact" column="BusinessContact " not-null="true" />
-	<property name="Createdate" column="Createdate " not-null="true" />
-	<property name="CreatedBy" column="CreatedBy " not-null="true" />
-	<property name="LastmodifiedDate" column="LastmodifiedDate " not-null="true" />
-	<property name="LastmodifedBy" column="LastmodifedBy " not-null="true" />
+	<property name="Createdate" column="Createdate " />
+	<property name="CreatedBy" column="CreatedBy " />
+	<property name="LastmodifiedDate" column="LastmodifiedDate "/>
+	<property name="LastmodifedBy" column="LastmodifedBy "/>
       </class>
 </hibernate-mapping>

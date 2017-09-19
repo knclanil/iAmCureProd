@@ -28,6 +28,7 @@ public class DoctorServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	System.out.println("Enter into doctors servlet");
 		String id=request.getParameter("id");
 		String fullName =request.getParameter("fullName");
 		String isDoctor	=request.getParameter("isDoctor");
@@ -41,7 +42,7 @@ public class DoctorServlet extends HttpServlet {
 		String CouncilYear =request.getParameter("councilYear");
 		String CertificatePath =request.getParameter("certificatePath");
 		String IDProofPath =request.getParameter("iDProofPath");
-		String isMedicalRegistrationverify =request.getParameter("isMedicalRegistrationverify");
+		String isMedicalRegistrationverify =request.getParameter(" ");
 		String Description =request.getParameter("description");
 		String Experince =request.getParameter("experince");
 		String City =request.getParameter("city");

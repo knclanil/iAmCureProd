@@ -2,9 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Bootstrap 3 Contact form with Validation</title>
-    <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/medicalstoreprofile.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">

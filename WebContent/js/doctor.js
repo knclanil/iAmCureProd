@@ -1,12 +1,12 @@
 function submitToParent(){
 	
 		var fullName=document.getElementById("fullName").value;
-		var isDoctor=document.getElementById("isDoctor").value;
+		//var isDoctor=document.getElementById("isDoctor").value;
 		var qualification=document.getElementById("qualification").value;
 		var College=document.getElementById("college").value;
 		var CompletionYear=document.getElementById("completionYear").value;
 		var Specilizations=document.getElementById("specilizations").value;
-		var specialized=document.getElementById("specialized").value;
+		//var specialized=document.getElementById("specialized").value;
 		var CouncilRegistrationNumber=document.getElementById("councilRegistrationNumber").value;
 		var CouncilName=document.getElementById("councilName").value;
 		var CouncilYear=document.getElementById("councilYear").value;
@@ -23,29 +23,30 @@ function submitToParent(){
 	
 	if(validateform())
 	{
-           addDoctorProfileProfile(fullName, isDoctor, qualification, college, completionYear, specilizations, specialized, councilRegistrationNumber, councilName, councilYear, file, file2, description, experince, city, file3, emailID, personalContact, businessContact);
+           addDoctorProfile(fullName, qualification, college, completionYear, specilizations,councilRegistrationNumber, councilName, councilYear, file, file2, description, experince, city, file3, emailID, personalContact, businessContact);
 	}else 
 		return false;
 	
 }
 
-function addDoctorProfileProfile(fullName, isDoctor, qualification, college, completionYear, specilizations, specialized, councilRegistrationNumber, councilName, councilYear, file, file2, description, experince, city, file3, emailID, personalContact, businessContact);
+function addDoctorProfile(fullName, qualification, college, completionYear, specilizations,councilRegistrationNumber, councilName, councilYear, file, file2, description, experince, city, file3, emailID, personalContact, businessContact)
 {
 	window.event.returnValue = false;
 	alert("Hiiiii");
-	document.location.href = "DoctorServlet?action=Submint&fullName="+fullName+"&isDoctor="+isDoctor+"&qualification="+qualification+"&college="+college+"&completionYear="+completionYear+"&specilizations="+specilizations+"&specialized="+specialized+"&councilRegistrationNumber="+councilRegistrationNumber+"&councilName="+councilName+"&councilYear="+councilYear+"&file="+file+"&file2="+file2+"&description="+description+"&experince="+experince+"&city="+city+"&file3="+file3+"&emailID="+emailID+"&personalContact="+personalContact+"&businessContact="+businessContact;
+	document.location.href = "DoctorServlet?action=Submint&fullName="+fullName+"&qualification="+qualification+"&college="+college+"&completionYear="+completionYear+"&specilizations="+specilizations+"&councilRegistrationNumber="+councilRegistrationNumber+"&councilName="+councilName+"&councilYear="+councilYear+"&file="+file+"&file2="+file2+"&description="+description+"&experince="+experince+"&city="+city+"&file3="+file3+"&emailID="+emailID+"&personalContact="+personalContact+"&businessContact="+businessContact;
 }
 
 
 function validateform()
 {
+	var valid=true;
 	var fullName=document.getElementById("fullName");
-	var isDoctor=document.getElementById("isDoctor");
+	//var isDoctor=document.getElementById("isDoctor");
 	var qualification=document.getElementById("qualification");
 	var College=document.getElementById("college");
 	var CompletionYear=document.getElementById("completionYear");
 	var Specilizations=document.getElementById("specilizations");
-	var specialized=document.getElementById("specialized");
+	//var specialized=document.getElementById("specialized");
 	var CouncilRegistrationNumber=document.getElementById("councilRegistrationNumber");
 	var CouncilName=document.getElementById("councilName");
 	var CouncilYear=document.getElementById("councilYear");
@@ -55,6 +56,7 @@ function validateform()
 	var Experince=document.getElementById("experince");
 	var City=document.getElementById("city");
 	var DoctorImagePath=document.getElementById("file3");
+	alert(DoctorImagePath.value);
 	var EmailID=document.getElementById("emailID");
 	var PersonalContact=document.getElementById("personalContact");
 	var BusinessContact=document.getElementById("businessContact");
@@ -89,12 +91,6 @@ function validateform()
 	{
 		alert("please enter Specilizations!");
 		Specilizations.focus();
-		return false;
-	}
-	else if (specialized.value=='')
-	{
-		alert("please enter specialized!");
-		specialized.focus();
 		return false;
 	}
 	else if (CouncilRegistrationNumber.value=='')
@@ -145,10 +141,10 @@ function validateform()
 		City.focus();
 		return false;
 	}
-	else if (DoctorCollegePath.value=='')
+	else if (DoctorImagePath.value=='')
 	{
-		alert("please enter DoctorCollegePath!");
-		DoctorCollegePath.focus();
+		alert("please enter DoctorImagePath!");
+		DoctorImagePath.focus();
 		return false;
 	}
 	else if (EmailID.value=='')

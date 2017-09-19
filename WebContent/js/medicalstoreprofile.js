@@ -16,18 +16,21 @@ function submitToMedicalStore(){
 		
 	if(validateform())
 	{
-		addmedicalstoreprofile(medicalstoreName, country, stateName, city, pinCode, streetName, phoneNumber, medicalStorePicture, descripition, drugLicenseNumber, contactPerson, drugDelivery, drugLicenseDocument);
+		addmedicalstoreprofile(medicalstoreName,country,stateName,city,pinCode,streetName,phoneNumber,medicalStorePicture,descripition,drugLicenseNumber,contactPerson,drugDelivery,drugLicenseDocument);
 			
 	}else 
 		return false;
 	
 }
-		function addmedicalstoreprofile(medicalstoreName, country, stateName, city, pinCode, streetName, phoneNumber, medicalStorePicture, descripition, drugLicenseNumber, contactPerson, drugDelivery, drugLicenseDocument);
+		function addmedicalstoreprofile(medicalstoreName, country, stateName, city, pinCode, streetName, phoneNumber, medicalStorePicture, descripition, drugLicenseNumber, contactPerson, drugDelivery, drugLicenseDocument)
 		{
-			document.location.href = "MedicalStoreServlet?action=Submint&medicalstoreName="+medicalstoreName+"&country="+country+"&stateName="+stateName+"&city="+city+"&pinCode="+pinCode+"&streetName="+streetName+"&phoneNumber="+phoneNumber+"&medicalStorePicture="+medicalStorePicture+"&descripition="+descripition+"&drugLicenseNumber="+drugLicenseNumber+"&contactPerson="+contactPerson+"&drugDelivery="+drugDelivery+"&drugLicenseDocument="+drugLicenseDocument;
+			window.event.returnValue = false;
+			alert("Hiiiii");
+			document.location.href ="MedicalStoreServlet?action=Submint&medicalstoreName="+medicalstoreName+"&country="+country+"&stateName="+stateName+"&city="+city+"&pinCode="+pinCode+"&streetName="+streetName+"&phoneNumber="+phoneNumber+"&medicalStorePicture="+medicalStorePicture+"&descripition="+descripition+"&drugLicenseNumber="+drugLicenseNumber+"&contactPerson="+contactPerson+"&drugDelivery="+drugDelivery+"&drugLicenseDocument="+drugLicenseDocument;
 		}
 function validateform()
 {
+	var valid=true;
 	var MedicalstoreName=document.getElementById("medicalstoreName");
 	var Country=document.getElementById("country");
 	var StateName=document.getElementById("state");

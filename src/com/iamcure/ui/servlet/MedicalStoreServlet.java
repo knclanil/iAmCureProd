@@ -28,7 +28,7 @@ public class MedicalStoreServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		System.out.println("Enter into doctors servlet");
 		request.getParameter("U_ID");
 		String MedicalstoreName=request.getParameter("MedicalstoreName");
 		String Country=request.getParameter("Country");
