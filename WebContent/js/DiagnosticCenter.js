@@ -15,15 +15,17 @@ function submitToParent(){
 	var DiagnosticsCenterLicenseDocument=document.getElementById("file1").value;
 	
 	
-	if(validateform()
+	if(validateform())
 	{
 		 addDoctorProfile(diagnosticCenterName, country, state, City, pinCode, streetName, phoneNumber, file, descripition, samplesPickup, contactPerson, diagnosticsCenterLicenseNumber, file1);
 	}else 
 		return false;
 	
 		
+
 }
-function addDoctorProfile(diagnosticCenterName, country, state, City, pinCode, streetName, phoneNumber, file, descripition, samplesPickup, contactPerson, diagnosticsCenterLicenseNumber, file1);
+
+function addDoctorProfile(diagnosticCenterName, country, state, City, pinCode, streetName, phoneNumber, file, descripition, samplesPickup, contactPerson, diagnosticsCenterLicenseNumber, file1)
 {
 	document.location.href="DoctorServlet?action=Submint&diagnosticCenterName="+diagnosticCenterName+"&country="+country+"&state="+state+"&City="+City+"&pinCode="+pinCode+"&streetName="+streetName+"&phoneNumber="+phoneNumber+"&file="+file+"&descripition="+descripition+"&samplesPickup="+samplesPickup+"&contactPerson="+contactPerson+"&diagnosticsCenterLicenseNumber="+diagnosticsCenterLicenseNumber+"&file1="+file1;
 }
@@ -125,4 +127,3 @@ else if (dagnosticCenterName.value=='')
 
 	return valid;
 }
-
